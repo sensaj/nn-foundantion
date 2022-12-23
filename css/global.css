@@ -1,0 +1,70 @@
+:root {
+    --jackDorsey: linear-gradient(315deg, #be0000, #3e54d3);
+    --centreLine: linear-gradient(315deg, #000 70%, #be0000 65%, #be0000 74%);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.service-container {
+    background: var(--jackDorsey);
+    /* height: 100vh; */
+    background-size: 400% 400%;
+    animation: gradient 5s ease-in-out infinite;
+}
+
+.service-tile {
+    transition: all 1s;
+    border-radius: 1rem;
+    background: #f4f0ec;
+    padding: 0;
+    /* height: 30rem; */
+    overflow: hidden;
+}
+
+.service-tile .btn {
+    display: none;
+    transition: all 1s;
+}
+
+.service-tile:hover {
+    background: #0000cc;
+    color: #ffff;
+    padding: 0.5rem;
+}
+
+.service-tile:hover .btn {
+    display: block;
+}
+
+.service-tile .service-img {
+    height: 11.5rem;
+    width: 100%;
+}
+
+.service-tile p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-us {
+    border-start-start-radius: 10rem;
+    background: #f4f0ec;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
