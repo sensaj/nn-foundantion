@@ -7,12 +7,13 @@ body {
     overflow-x: hidden;
 }
 
-.service-container {
+
+/* .service-container {
     background: var(--jackDorsey);
-    /* height: 100vh; */
+     height: 100vh;
     background-size: 400% 400%;
     animation: gradient 5s ease-in-out infinite;
-}
+} */
 
 .service-tile {
     transition: all 1s;
@@ -20,22 +21,6 @@ body {
     background: #f4f0ec;
     padding: 0;
     /* height: 30rem; */
-    overflow: hidden;
-}
-
-.service-tile .btn {
-    display: none;
-    transition: all 1s;
-}
-
-.service-tile:hover {
-    background: #0000cc;
-    color: #ffff;
-    padding: 0.5rem;
-}
-
-.service-tile:hover .btn {
-    display: block;
 }
 
 .service-tile .service-img {
@@ -44,12 +29,108 @@ body {
 }
 
 .service-tile p {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
     width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# management
+--------------------------------------------------------------*/
+
+.management {
+    background: #fff;
+}
+
+.management .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.management .member .pic {
     overflow: hidden;
-    text-overflow: ellipsis;
+    width: 150px;
+    height: 100px;
+    border-radius: 90%;
+}
+
+.management .member .pic img {
+    transition: ease-in-out 0.3s;
+    width: 150px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.management .member:hover img {
+    transform: scale(1.1);
+}
+
+.management .member .member-info {
+    padding-left: 30px;
+}
+
+.management .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #2c4964;
+}
+
+.management .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.management .member span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #b2c8dd;
+    bottom: 0;
+    left: 0;
+}
+
+.management .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.management .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.management .member .social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background: #a0bcd5;
+}
+
+.management .member .social a i {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.management .member .social a:hover {
+    background: #1977cc;
+}
+
+.management .member .social a+a {
+    margin-left: 8px;
 }
 
 .contact-us {
